@@ -13,4 +13,13 @@ export class CarViewComponent implements OnInit {
   ngOnInit() {
   }
 
+  costUp(): Boolean {
+    this.selectedCar.costo++;
+    return false;
+  }
+  
+  costDown(): Boolean {
+    this.selectedCar.costo--;
+    return false;
+  }
 }
