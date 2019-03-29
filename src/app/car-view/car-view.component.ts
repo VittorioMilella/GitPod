@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Car } from '../car';
+import { CarsComponent } from '../cars/cars.component';
 
 @Component({
   selector: 'app-car-view',
@@ -7,19 +8,22 @@ import { Car } from '../car';
   styleUrls: ['./car-view.component.css']
 })
 export class CarViewComponent implements OnInit {
-  @Input() selectedCar : Car;
+  @Input() ciao : Car;
   constructor() { }
 
   ngOnInit() {
   }
 
   costUp(): Boolean {
-    this.selectedCar.costo++;
+    this.ciao.costo++;
     return false;
   }
-  
+
   costDown(): Boolean {
-    this.selectedCar.costo--;
+    this.ciao.costo--;
     return false;
   }
+
+
+  
 }

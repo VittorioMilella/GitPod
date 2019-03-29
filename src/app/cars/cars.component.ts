@@ -21,5 +21,16 @@ export class CarsComponent implements OnInit {
   onSelect(car: Car): void {
     this.selectedCar = car;
   }
+
+  onAddCar(id: HTMLInputElement,nome: HTMLInputElement,costo: HTMLInputElement,consumo: HTMLInputElement)
+  {
+      let auto : Car = new Car();
+      auto.id = Number( id.value);
+      auto.name = nome.value;
+      auto.costo = Number (costo.value);
+      auto.consumo = Number(consumo.value);
+
+      this.cars.push(auto);
+  }
 }
 

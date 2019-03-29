@@ -19,4 +19,13 @@
 
 </div>
 <hr>
-<app-car-view *ngIf="selectedCar" [selectedCar]="selectedCar"></app-car-view>
+<app-car-view *ngIf="selectedCar" [ciao]="selectedCar"></app-car-view>
+
+
+<form>
+    id:<input #id>
+    nome:<input #nome>
+    costo:<input #costo>
+    consumo:<input #consumo>
+    <button (click)="onAddCar(id,nome,costo,consumo)">pigiami</button>
+</form>
